@@ -111,3 +111,9 @@ def les(_, message):
     les = requests.get("https://nekos.life/api/v2/img/les").json()
     les = url.get("les")
     message.reply_video(les)
+
+@app.on_message(filters.command("wallpaper", PREFIX))
+def wallpaper(_, message):
+    wallpaper = requests.get("https://nekos.life/api/v2/img/wallpaper").json()
+    wallpaper = url.get("wallpaper")
+    message.reply_photo(wallpaper)
