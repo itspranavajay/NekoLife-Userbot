@@ -93,3 +93,15 @@ def feetg(_, message):
     feetg = requests.get("https://nekos.life/api/v2/img/feetg").json()
     feetg = url.get("feetg")
     message.reply_video(feetg)
+
+@app.on_message(filters.command("cumgif", PREFIX))
+def cum(_, message):
+    cum = requests.get("https://nekos.life/api/v2/img/cum").json()
+    cum = url.get("cum")
+    message.reply_video(cum)
+
+@app.on_message(filters.command("erokemo", PREFIX))
+def erokemo(_, message):
+    erokemo = requests.get("https://nekos.life/api/v2/img/erokemo").json()
+    erokemo = url.get("erokemo")
+    message.reply_photo(erokemo)
