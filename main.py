@@ -64,3 +64,9 @@ def trap(_, message):
     trap = url.get("trap")
     message.reply_photo(trap)
 
+@app.on_message(filters.command("futanari", PREFIX))
+def futanari(_, message):
+    futanari = requests.get("https://nekos.life/api/v2/img/futanari").json()
+    futanari = url.get("futanari")
+    message.reply_photo(futanari)
+
