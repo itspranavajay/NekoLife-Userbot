@@ -38,3 +38,9 @@ def solog(_, message):
     solog = requests.get("https://nekos.life/api/v2/img/solog").json()
     solog = url.get("solog")
     message.reply_video(solog)
+
+@app.on_message(filters.command("neko", PREFIX))
+def neko(_, message):
+    neko = requests.get("https://nekos.life/api/v2/img/neko").json()
+    neko = url.get("neko")
+    message.reply_photo(neko)
