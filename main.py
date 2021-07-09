@@ -170,4 +170,4 @@ def cumjpg(_, message):
 def bj(_, message):
     bj = requests.get("https://nekos.life/api/v2/img/bj").json()
     bj = url.get("bj")
-    message.reply_photo(bj)
+    message.reply_video(bj)
