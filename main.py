@@ -171,3 +171,17 @@ def bj(_, message):
     bj = requests.get("https://nekos.life/api/v2/img/bj").json()
     bj = url.get("bj")
     message.reply_video(bj)
+
+@app.on_message(filters.command("blowjob", PREFIX))
+def blowjob(_, message):
+    blowjob = requests.get("https://nekos.life/api/v2/img/blowjob").json()
+    blowjob = url.get("blowjob")
+    message.reply_photo(blowjob)
+
+@app.on_message(filters.command("nekogif", PREFIX))
+def nekogif(_, message):
+    nsfw_neko_gif = requests.get("https://nekos.life/api/v2/img/nsfw_neko_gif").json()
+    nsfw_neko_gif = url.get("nsfw_neko_gif")
+    message.reply_video(nsfw_neko_gif)
+
+
