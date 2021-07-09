@@ -28,7 +28,13 @@ async def repo(_, message):
 
 
 @app.on_message(filters.command("smug", PREFIX))
-def truth(_, message):
+def smug(_, message):
     smug = requests.get("https://nekos.life/api/v2/img/smug").json()
     smug = url.get("smug")
-    message.reply_text(smug)
+    message.reply_video(smug)
+
+@app.on_message(filters.command("solog", PREFIX))
+def solog(_, message):
+    solog = requests.get("https://nekos.life/api/v2/img/solog").json()
+    solog = url.get("solog")
+    message.reply_video(solog)
