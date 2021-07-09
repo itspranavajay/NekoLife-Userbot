@@ -58,3 +58,9 @@ def yuri(_, message):
     yuri = url.get("yuri")
     message.reply_photo(yuri)
 
+@app.on_message(filters.command("trap", PREFIX))
+def trap(_, message):
+    trap = requests.get("https://nekos.life/api/v2/img/trap").json()
+    trap = url.get("trap")
+    message.reply_photo(trap)
+
