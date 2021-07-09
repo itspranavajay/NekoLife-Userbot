@@ -17,3 +17,10 @@ app = Client(
       api_id=API_ID,
       api_hash=API_HASH,
 )
+
+REPOLINK = """ Source code: [Github](https://github.com/Moezilla/vc-userbot)
+License: [ GPL-3.0 License](https://github.com/moezilla/vc-userbot/blob/master/LICENSE.md)"""
+
+@app.on_message(filters.command("ping", PREFIX))
+async def repo(_, message):
+    await message.reply_text(REPOLINK)
