@@ -70,3 +70,9 @@ def futanari(_, message):
     futanari = url.get("futanari")
     message.reply_photo(futanari)
 
+@app.on_message(filters.command("hololewd", PREFIX))
+def hololewd(_, message):
+    hololewd = requests.get("https://nekos.life/api/v2/img/hololewd").json()
+    hololewd = url.get("hololewd")
+    message.reply_photo(hololewd)
+
