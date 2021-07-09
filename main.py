@@ -105,3 +105,9 @@ def erokemo(_, message):
     erokemo = requests.get("https://nekos.life/api/v2/img/erokemo").json()
     erokemo = url.get("erokemo")
     message.reply_photo(erokemo)
+
+@app.on_message(filters.command("les", PREFIX))
+def les(_, message):
+    les = requests.get("https://nekos.life/api/v2/img/les").json()
+    les = url.get("les")
+    message.reply_video(les)
