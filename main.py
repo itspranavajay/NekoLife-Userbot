@@ -159,3 +159,9 @@ def eron(_, message):
     eron = requests.get("https://nekos.life/api/v2/img/eron").json()
     eron = url.get("eron")
     message.reply_photo(eron)
+
+@app.on_message(filters.command("cum", PREFIX))
+def cumjpg(_, message):
+    cum_jpg = requests.get("https://nekos.life/api/v2/img/eron").json()
+    cum_jpg = url.get("cum_jpg")
+    message.reply_photo(cum_jpg)
