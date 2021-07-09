@@ -82,8 +82,14 @@ def lewdkemo(_, message):
     lewdkemo = url.get("lewdkemo")
     message.reply_photo(lewdkemo)
 
-@app.on_message(filters.command("solog", PREFIX))
+@app.on_message(filters.command("sologif", PREFIX))
 def solog(_, message):
     solog = requests.get("https://nekos.life/api/v2/img/solog").json()
     solog = url.get("solog")
     message.reply_video(solog)
+
+@app.on_message(filters.command("feetgif", PREFIX))
+def feetg(_, message):
+    feetg = requests.get("https://nekos.life/api/v2/img/feetg").json()
+    feetg = url.get("feetg")
+    message.reply_video(feetg)
