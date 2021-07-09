@@ -44,3 +44,9 @@ def neko(_, message):
     neko = requests.get("https://nekos.life/api/v2/img/neko").json()
     neko = url.get("neko")
     message.reply_photo(neko)
+
+@app.on_message(filters.command("feet", PREFIX))
+def feet(_, message):
+    feet = requests.get("https://nekos.life/api/v2/img/feet").json()
+    feet = url.get("feet")
+    message.reply_photo(feet)
