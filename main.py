@@ -50,3 +50,11 @@ def feet(_, message):
     feet = requests.get("https://nekos.life/api/v2/img/feet").json()
     feet = url.get("feet")
     message.reply_photo(feet)
+
+
+@app.on_message(filters.command("yuri", PREFIX))
+def yuri(_, message):
+    yuri = requests.get("https://nekos.life/api/v2/img/yuri").json()
+    yuri = url.get("yuri")
+    message.reply_photo(yuri)
+
