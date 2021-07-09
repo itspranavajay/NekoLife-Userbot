@@ -117,3 +117,9 @@ def wallpaper(_, message):
     wallpaper = requests.get("https://nekos.life/api/v2/img/wallpaper").json()
     wallpaper = url.get("wallpaper")
     message.reply_photo(wallpaper)
+
+@app.on_message(filters.command("lewdk", PREFIX))
+def lewdk(_, message):
+    lewdk = requests.get("https://nekos.life/api/v2/img/lewdk").json()
+    lewdk = url.get("lewdk")
+    message.reply_photo(lewdk)
