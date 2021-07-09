@@ -123,3 +123,33 @@ def lewdk(_, message):
     lewdk = requests.get("https://nekos.life/api/v2/img/lewdk").json()
     lewdk = url.get("lewdk")
     message.reply_photo(lewdk)
+
+@app.on_message(filters.command("ngif", PREFIX))
+def ngif(_, message):
+    ngif = requests.get("https://nekos.life/api/v2/img/ngif").json()
+    ngif = url.get("ngif")
+    message.reply_video(ngif)
+
+@app.on_message(filters.command("tickle", PREFIX))
+def tickle(_, message):
+    tickle = requests.get("https://nekos.life/api/v2/img/tickle").json()
+    tickle = url.get("tickle")
+    message.reply_video(tickle)
+
+@app.on_message(filters.command("lewd", PREFIX))
+def lewd(_, message):
+    lewd = requests.get("https://nekos.life/api/v2/img/lewd").json()
+    lewd = url.get("lewd")
+    message.reply_photo(lewd)
+
+@app.on_message(filters.command("feed", PREFIX))
+def feed(_, message):
+    feed = requests.get("https://nekos.life/api/v2/img/feed").json()
+    feed = url.get("feed")
+    message.reply_video(feed)
+
+@app.on_message(filters.command("eroyuri", PREFIX))
+def eroyuri(_, message):
+    eroyuri = requests.get("https://nekos.life/api/v2/img/eroyuri").json()
+    eroyuri = url.get("eroyuri")
+    message.reply_photo(eroyuri)
