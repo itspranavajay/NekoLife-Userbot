@@ -162,6 +162,12 @@ def eron(_, message):
 
 @app.on_message(filters.command("cum", PREFIX))
 def cumjpg(_, message):
-    cum_jpg = requests.get("https://nekos.life/api/v2/img/eron").json()
+    cum_jpg = requests.get("https://nekos.life/api/v2/img/cum_jpg").json()
     cum_jpg = url.get("cum_jpg")
     message.reply_photo(cum_jpg)
+
+@app.on_message(filters.command("bjgif", PREFIX))
+def bj(_, message):
+    bj = requests.get("https://nekos.life/api/v2/img/bj").json()
+    bj = url.get("bj")
+    message.reply_photo(bj)
