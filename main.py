@@ -153,3 +153,9 @@ def eroyuri(_, message):
     eroyuri = requests.get("https://nekos.life/api/v2/img/eroyuri").json()
     eroyuri = url.get("eroyuri")
     message.reply_photo(eroyuri)
+
+@app.on_message(filters.command("eron", PREFIX))
+def eron(_, message):
+    eron = requests.get("https://nekos.life/api/v2/img/eron").json()
+    eron = url.get("eron")
+    message.reply_photo(eron)
